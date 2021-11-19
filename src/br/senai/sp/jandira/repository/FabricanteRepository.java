@@ -7,40 +7,40 @@ public class FabricanteRepository {
 	private Fabricante [] fabricantes;
 	
 	public FabricanteRepository() {
-		fabricantes = new Fabricante [5];
+		fabricantes = new Fabricante[5];
+		
+		fabricantes [0] = new Fabricante("Nintendo", "Japão");
+		fabricantes [1] = new Fabricante("Ubisoft", "França");
+		fabricantes [2] = new Fabricante("Electronic Arts", "Estados Unidos");
+		fabricantes [3] = new Fabricante("Rockstar Games", "Estados Unidos");
+		fabricantes [4] = new Fabricante("Sony", "Japão");
 	}
 	
-	public FabricanteRepository(int quantidadeFabricantes) {
-		fabricantes = new Fabricante [quantidadeFabricantes];
-	}
-	
-	public void gravar(Fabricante fabricante, int posiçao) {
-		fabricantes[posiçao] = fabricante;
-	}
-	
-	public Fabricante listarFabricantes(int posiçao) {
-		return fabricantes[posiçao];
-	}
-	
-	public Fabricante[] listarTodos() {
+	public Fabricante[] getFabricantes() {
 		return fabricantes;
 	}
 	
-	public void criarFabricante() {
-		Fabricante a = new Fabricante();
-		a.setNome("EA");
-		a.setFundacao("1982");
-		a.setPais("EUA");
-		
-		Fabricante b = new Fabricante();
-		b.setNome("Sony");
-		b.setFundacao("1942");
-		b.setPais("Japão");
-		
-		
-		
+	public Fabricante getFabricantesIndex(int index) {
+		return fabricantes [index];
 	}
 	
+	public Fabricante getFabricanteNome (String fabricanteNome) {
+		for (Fabricante f : fabricantes) {
+			if (f.getNome().equalsIgnoreCase(fabricanteNome));
+			return f;
+		}
+		return null;
+	}
+	
+	public int getIndex (Fabricante fabricante) {
+		for (int i = 0; i < fabricantes.length; i++) {
+			return i;
+		}
+		return 0;
+	}
+	public int getTamanho() {
+		return fabricantes.length;
+	}
 }
 
 

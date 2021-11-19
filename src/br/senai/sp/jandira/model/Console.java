@@ -10,24 +10,19 @@ public enum Console {
 	XBOXONE("Xbox One", "Microsoft");
 	
 	private String descricao;
-	
-	private Console(String descricao) {
-		this.descricao = descricao;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-	
 	private String empresa;
 	
 	private Console(String descricao, String empresa) {
 		this.empresa = empresa;
+		this.descricao = descricao;
 	}
 	
 	public String getEmpresa() {
 		return empresa;
 	}
 	
+	public String getDescricao() {
+		return descricao;
+	}
 
 }
