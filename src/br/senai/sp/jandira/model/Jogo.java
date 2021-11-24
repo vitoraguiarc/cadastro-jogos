@@ -6,7 +6,14 @@ public class Jogo {
 	private Fabricante fabricante;
 	private boolean usado;
 	private Console console;
-	private double valor;
+	private String valor;
+	
+	public String getValor() {
+		return valor;
+	}
+	public void setValor(String valor) {
+		this.valor = valor;
+	}
 	private String observacoes;
 	
 	public String getJogo() {
@@ -27,14 +34,7 @@ public class Jogo {
 	public void setConsole(Console console) {
 		this.console = console;
 	}
-	public double getValor(String valor) {
-		return Double.parseDouble(valor);
-	}
-	
-	
-	public void setValor(double valor) {
-		this.valor = valor;
-	}
+
 	public String getObservacoes() {
 		return observacoes;
 	}
@@ -48,14 +48,8 @@ public class Jogo {
 	public void setUsado(boolean usado) {
 		this.usado = usado;
 	}
-	public void setValor(String valor) {
-		this.valor = Double.parseDouble(valor);
+	
 		
-	}
-	public String getValor() {
-		
-		return null;
-	}
 	
 	
 	
