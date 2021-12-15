@@ -36,6 +36,7 @@ public class App {
 		
 	FrameCadastroJogos f = new FrameCadastroJogos();
 	f.setVisible(true);
+	f.setResizable(false);
 		
 		
 		
